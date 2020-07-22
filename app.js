@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 4000 || process.env.PORT;
+const port = process.env.PORT || 4000;
 const tw = require("node-tweet-stream");
 const io = require("socket.io")(http);
 require("dotenv").config();
