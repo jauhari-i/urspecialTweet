@@ -6,7 +6,6 @@ const io = require("socket.io")(http);
 const cors = require("cors")
 require("dotenv").config();
 
-app.use(cors());
 var http = require("http").createServer(app);
 
 t = new tw({
@@ -31,6 +30,7 @@ t.on("tweet", function (tweet) {
 
 app.get("/", (req, res) => res.send("Hello World!"));
 
+http.use(cors());
 http.listen(port, () => {
   console.log("listening on *:" + port);
 });
