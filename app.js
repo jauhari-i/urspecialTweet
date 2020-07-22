@@ -30,7 +30,7 @@ t.on("tweet", function (tweet) {
 
 app.get("/", (req, res) => res.send("Hello World!"));
 
-http.use(cors());
+app.use(cors());
 http.listen(port, () => {
   console.log("listening on *:" + port);
 });
