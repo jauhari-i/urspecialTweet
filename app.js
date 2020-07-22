@@ -3,8 +3,10 @@ const app = express();
 const port = process.env.PORT || 4000;
 const tw = require("node-tweet-stream");
 const io = require("socket.io")(http);
+const cors = require("cors")
 require("dotenv").config();
 
+app.use(cors());
 var http = require("http").createServer(app);
 
 t = new tw({
