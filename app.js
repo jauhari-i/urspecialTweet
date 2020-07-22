@@ -30,12 +30,7 @@ t = new tw({
 t.on("error", function (err) {
   console.log("Oh no");
 });
-
-t.track("quotes");
 t.track("onedirection");
-t.track("bucin");
-t.track("zonanyaman");
-t.track("kamukuat");
 
 let interval;
 
